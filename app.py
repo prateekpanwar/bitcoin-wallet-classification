@@ -10,6 +10,7 @@ from flask import Flask
 from flask_restful import Api, Resource, reqparse
 from classification_v2 import label_address
 import os
+import json
 
 app = Flask(__name__)
 api = Api(app)
