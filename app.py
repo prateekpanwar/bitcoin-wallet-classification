@@ -20,7 +20,8 @@ class User(Resource):
         final_labels = ''
         final_labels = label_address(address)
         if len(final_labels) != 0:
-            return (final_labels.to_json(), 200)
+            resp = Response(response=final_labels.to_json(), status=200, mimetype="application/json")
+            return (repo)
         return ("Not founds", 404)
 
 class instruct(Resource):
