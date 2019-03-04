@@ -66,6 +66,7 @@ Google-Search-API==1.1.14
 greenlet==0.4.15
 grpcio==1.18.0
 gspread==3.0.1
+gunicorn==19.9.0
 h5py==2.9.0
 heapdict==1.0.0
 html5lib==1.0.1
