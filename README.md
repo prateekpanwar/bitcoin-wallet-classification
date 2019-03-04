@@ -1,4 +1,6 @@
 # bitcoin-wallet-classification
-Wallet classification method
+Automatic wallet labelling method
 
+```
 Free API: https://bitcoin-wallet-classifier.herokuapp.com/
+```
