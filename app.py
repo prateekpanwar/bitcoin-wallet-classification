@@ -6,7 +6,7 @@ Created on Fri Dec 21 13:38:04 2018
 @author: agile
 """
 
-from flask import Flask
+from flask import Flask, Response
 from flask_restful import Api, Resource, reqparse
 from classification_v2 import label_address
 import os
@@ -22,7 +22,7 @@ class User(Resource):
         final_labels = label_address(address)
         if len(final_labels) != 0:
             resp = Response(response=final_labels.to_json(), status=200, mimetype="application/json")
-            return (repo)
+            return (resp)
         return ("Not founds", 404)
 
 class instruct(Resource):
@@ -32,6 +32,6 @@ class instruct(Resource):
 api.add_resource(User, "/<string:address>")
 api.add_resource(instruct, "/")
 
-port = int(os.environ.get("PORT", 5000))
+port = int(os.environ.get("PORT", 4000))
 app.run(debug=False, port=port, host='0.0.0.0')
 
